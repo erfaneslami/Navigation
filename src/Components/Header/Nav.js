@@ -1,11 +1,13 @@
-const Header = () => {
+import Classes from "./Nav.module.scss";
+
+const Nav = () => {
   return (
     <>
-      <div className="nav-container">
+      <div className={Classes["nav-container"]}>
         <nav>
-          <ul>
+          <ul className={Classes.desktopNav}>
             <li>
-              <a href="" className="link-logo"></a>
+              <a href="" className={Classes.logo}></a>
             </li>
             <li>
               <a href="">فروشگاه</a>
@@ -38,10 +40,10 @@ const Header = () => {
               <a href="">پشتیبانی</a>
             </li>
             <li>
-              <a href="" className="logo-search"></a>
+              <a href="" className={Classes.search}></a>
             </li>
             <li>
-              <a href="" className="logo-cart"></a>
+              <a href="" className={Classes.cart}></a>
             </li>
           </ul>
         </nav>
@@ -50,4 +52,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Nav;
