@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Overlay from "../UI/Overlay";
 import Classes from "./Search.module.scss";
 
 const searchVariant = {
@@ -14,20 +15,23 @@ const searchVariant = {
 
 const Search = (props) => {
   return (
-    <motion.div
-      variants={searchVariant}
-      initial="initial"
-      animate="show"
-      className={Classes.searchContainer}
-    >
-      <div className={Classes.searchBar}>
-        <div className={Classes.searchLogo}></div>
-        <form>
-          <input type="text" placeholder=" جستجوی محصولات ..." />
-        </form>
-      </div>
-      <div className={Classes.searchClose} onClick={props.onClose}></div>
-    </motion.div>
+    <>
+      <motion.div
+        variants={searchVariant}
+        initial="initial"
+        animate="show"
+        className={Classes.searchContainer}
+      >
+        <div className={Classes.searchBar}>
+          <div className={Classes.searchLogo}></div>
+          <form>
+            <input type="text" placeholder=" جستجوی محصولات ..." />
+          </form>
+        </div>
+        <div className={Classes.searchClose} onClick={props.onClose}></div>
+      </motion.div>
+      <Overlay onClick={props.onClose} />
+    </>
   );
 };
 
