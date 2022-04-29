@@ -2,7 +2,9 @@ import { useMediaQuery } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 import Search from "./Search";
+import Classes from "./Nav.module.scss";
 
 const Nav = (props) => {
   const desktopView = useMediaQuery("(min-width:52.5em)");
@@ -24,6 +26,7 @@ const Nav = (props) => {
           {isSearching && <Search onClose={closeSearch} key={2} />}
         </AnimatePresence>
       )}
+      {!desktopView && <MobileNav />}
     </nav>
   );
 };
