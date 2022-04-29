@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Classes from "./Header.module.scss";
 import Nav from "./Nav";
@@ -17,12 +17,9 @@ const Header = () => {
 
   return (
     <div className={Classes["nav-container"]}>
-      <AnimatePresence>
-        {!isSearching ? (
-          <Nav onSearch={showSearch} />
-        ) : (
-          <Search onClose={closeSearch} />
-        )}
+      <AnimatePresence exitBeforeEnter>
+        {!isSearching && <Nav onSearch={showSearch} key={4} />}
+        {isSearching && <Search onClose={closeSearch} key={5} />}
       </AnimatePresence>
     </div>
   );
