@@ -18,10 +18,7 @@ const Header = () => {
 
   return (
     <header className={Classes["nav-container"]}>
-      <AnimatePresence exitBeforeEnter>
-        {!isSearching && <Nav onSearch={showSearch} key={4} />}
-        {isSearching && <Search onClose={closeSearch} key={5} />}
-      </AnimatePresence>
+      <Nav />
     </header>
   );
 };

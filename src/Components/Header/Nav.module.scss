@@ -3,46 +3,8 @@ nav {
   width: 100rem;
   height: 100%;
 
-  .desktopNav {
-    height: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    li a {
-      text-decoration: none;
-      color: #fff;
-      opacity: 0.8;
-      font-size: 1.4rem;
-      transition: opacity 400ms;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .logo {
-      background: url(../../Images/apple-logo.svg);
-    }
-
-    .search {
-      background: url(../../Images/search-icon.svg);
-    }
-
-    .cart {
-      background: url(../../Images/bag-icon.svg);
-    }
-
-    .logo,
-    .search,
-    .cart {
-      display: block;
-      height: 4.4rem;
-      width: 2rem;
-      background-position: center;
-      background-size: 1.8rem;
-      background-repeat: no-repeat;
-    }
+  @media screen and (max-width: 68.75em) {
+    width: 100%;
+    padding: 0 3.2rem;
   }
 }
