@@ -1,53 +1,60 @@
-import { motion } from "framer-motion";
+import { filterProps, motion } from "framer-motion";
 import Classes from "./Nav.module.scss";
 
-const Nav = () => {
+const navVariants = {
+  exit: {
+    scale: 0.5,
+    opacity: 0,
+  },
+};
+
+const Nav = (props) => {
   return (
-    <motion.div exit={{ scale: 0.5 }} className={Classes["nav-container"]}>
+    <div className={Classes["nav-container"]}>
       <nav>
         <ul className={Classes.desktopNav}>
-          <li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="" className={Classes.logo}></a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">فروشگاه</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">مک</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">آیپد</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">آیفون</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">اپل واچ</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">ایرپاد</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">اپل هوم</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">لوازم جانبی</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">فقط در اپل</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="">پشتیبانی</a>
-          </li>
-          <li>
-            <a href="" className={Classes.search}></a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
+            <a href="#" className={Classes.search} onClick={props.onSearch}></a>
+          </motion.li>
+          <motion.li variants={navVariants} exit="exit">
             <a href="" className={Classes.cart}></a>
-          </li>
+          </motion.li>
         </ul>
       </nav>
-    </motion.div>
+    </div>
   );
 };
 

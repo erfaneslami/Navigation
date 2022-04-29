@@ -1,17 +1,21 @@
+import { motion } from "framer-motion";
 import Classes from "./Search.module.scss";
 
-const Search = () => {
+const Search = (props) => {
   return (
     <>
-      <div className={Classes.searchContainer}>
+      <motion.div
+        animate={{ opacity: 0.8 }}
+        className={Classes.searchContainer}
+      >
         <div className={Classes.searchBar}>
           <div className={Classes.searchLogo}></div>
           <form>
             <input type="text" placeholder=" جستجوی محصولات ..." />
           </form>
         </div>
-        <div className={Classes.searchClose}></div>
-      </div>
+        <div className={Classes.searchClose} onClick={props.onClose}></div>
+      </motion.div>
     </>
   );
 };
