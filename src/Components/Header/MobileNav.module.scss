@@ -48,6 +48,7 @@
       height: 0.1rem;
       background-color: #fff;
       position: absolute;
+      transition: all 400ms;
     }
 
     .lineOne {
@@ -55,6 +56,17 @@
     }
     .lineTow {
       top: 4px;
+    }
+
+    &.active {
+      .lineOne {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      .lineTow {
+        transform: rotate(45deg);
+        top: 0;
+      }
     }
   }
 }

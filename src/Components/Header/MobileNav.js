@@ -40,6 +40,7 @@ const MobileNav = (props) => {
   const [isOpenMenu, setIsMenu] = useState(false);
   const [isSearchFocus, setIsSearchFocus] = useState(false);
   const headerClass = `${Classes.mobileNav} ${isOpenMenu && Classes.open}`;
+  const burgerClass = `${Classes.menuIcon} ${isOpenMenu && Classes.active}`;
 
   const toggleMenu = () => {
     setIsMenu((preState) => {
@@ -65,7 +66,7 @@ const MobileNav = (props) => {
           <a className={Classes.appleIcon}></a>
         </li>
         <li>
-          <div className={Classes.menuIcon} onClick={toggleMenu}>
+          <div className={burgerClass} onClick={toggleMenu}>
             <div>
               <span className={Classes.lineOne}></span>
               <span className={Classes.lineTow}></span>
