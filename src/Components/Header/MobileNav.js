@@ -99,7 +99,7 @@ const MobileNav = (props) => {
                     type="button"
                     className={Classes.cancelBtn}
                   >
-                    کنسل
+                    انصراف
                   </motion.button>
                 )}
 
