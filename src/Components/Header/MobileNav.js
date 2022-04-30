@@ -37,14 +37,22 @@ const searchMenuVariant = {
 };
 
 const MobileNav = (props) => {
-  const [isOpenMenu, setIsMenu] = useState(true);
-
+  const [isOpenMenu, setIsMenu] = useState(false);
+  const [isSearchFocus, setIsSearchFocus] = useState(false);
   const headerClass = `${Classes.mobileNav} ${isOpenMenu && Classes.open}`;
 
   const toggleMenu = () => {
     setIsMenu((preState) => {
       return !preState;
     });
+  };
+
+  const setFocus = () => {
+    setIsSearchFocus(true);
+  };
+
+  const setNoFocus = () => {
+    setIsSearchFocus(false);
   };
 
   return (
@@ -82,20 +90,23 @@ const MobileNav = (props) => {
                 animate="animate"
                 exit="initial"
               >
-                <motion.button
-                  initial={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  type="button"
-                  className={Classes.cancelBtn}
-                >
-                  کنسل
-                </motion.button>
+                {isSearchFocus && (
+                  <motion.button
+                    onClick={setNoFocus}
+                    initial={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    type="button"
+                    className={Classes.cancelBtn}
+                  >
+                    کنسل
+                  </motion.button>
+                )}
+
                 <motion.input
-                  // initial={{ padding: " 1.2rem 2.4rem" }}
-                  // exit={{ padding: 0 }}
                   initial={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   type="text"
+                  onFocus={setFocus}
                   placeholder=" جستجوی محصولات ..."
                 />
                 <motion.div
