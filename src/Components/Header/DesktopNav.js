@@ -28,7 +28,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a className={Classes.logo}></a>
+        <span className={Classes.logo}></span>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -37,7 +37,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">فروشگاه</a>
+        <a href="./">فروشگاه</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -46,7 +46,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">مک</a>
+        <a href="./">مک</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -55,7 +55,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">آیپد</a>
+        <a href="./">آیپد</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -64,7 +64,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">آیفون</a>
+        <a href="./">آیفون</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -73,7 +73,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">اپل واچ</a>
+        <a href="./">اپل واچ</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -82,7 +82,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">ایرپاد</a>
+        <a href="./">ایرپاد</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -91,7 +91,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">اپل هوم</a>
+        <a href="./">اپل هوم</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -100,7 +100,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">لوازم جانبی</a>
+        <a href="./">لوازم جانبی</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -109,7 +109,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">فقط در اپل</a>
+        <a href="./">فقط در اپل</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -118,7 +118,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#">پشتیبانی</a>
+        <a href="./">پشتیبانی</a>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -127,7 +127,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="#" className={Classes.search} onClick={props.onSearch}></a>
+        <span className={Classes.search} onClick={props.onSearch}></span>
       </motion.li>
       <motion.li
         variants={navVariants}
@@ -136,7 +136,7 @@ const DesktopNav = (props) => {
         animate="show"
         exit="exit"
       >
-        <a href="" className={Classes.cart}></a>
+        <span href="" className={Classes.cart}></span>
       </motion.li>
     </ul>
   );
