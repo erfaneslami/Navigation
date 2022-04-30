@@ -19,7 +19,7 @@ const Nav = (props) => {
   };
 
   return (
-    <nav>
+    <nav className={Classes.nav}>
       {desktopView && (
         <AnimatePresence exitBeforeEnter>
           {!isSearching && <DesktopNav onSearch={showSearch} key={1} />}
