@@ -1,6 +1,22 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Classes from "./MobileNav.module.scss";
+
+const menuVariant = {
+  initial: {
+    height: 0,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  animate: {
+    height: "100vh",
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
 const MobileNav = (props) => {
   const [isOpenMenu, setIsMenu] = useState(true);
 
@@ -31,12 +47,13 @@ const MobileNav = (props) => {
         </li>
       </ul>
 
-      {isOpenMenu && (
-        <AnimatePresence>
+      <AnimatePresence>
+        {isOpenMenu && (
           <motion.ul
-            initial={{ height: 0 }}
-            exit={{ height: 0 }}
-            animate={{ height: "100vh" }}
+            variants={menuVariant}
+            initial="initial"
+            animate="animate"
+            exit="initial"
             className={Classes.mobileNavList}
           >
             <li>
@@ -70,8 +87,8 @@ const MobileNav = (props) => {
               <a href="#">پشتیبانی</a>
             </li>
           </motion.ul>
-        </AnimatePresence>
-      )}
+        )}
+      </AnimatePresence>
     </>
   );
 };
